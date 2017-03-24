@@ -5,6 +5,7 @@ let sentenceSplitter = require('sentence-splitter')
 
 var sentences
 var sentenceList
+var result = []
 
 fs.readFile('north-and-south.txt', 'utf8', function (err, data) {
   if (err) {
@@ -19,10 +20,17 @@ fs.readFile('north-and-south.txt', 'utf8', function (err, data) {
         //console.log(value)
         var sentimentValue = sentiment(value.raw)
         value.sentiment = sentimentValue       
-        console.log(value)
+        //console.log(value)
+        result.push(value)
         //console.log(sentimentValue)
     }    
   })
+
+    fs.writeFile('output.txt', JSON.stringify(result, null, 4), function (err) {
+            if (err) return console.log(err);
+            console.log('worked');
+    })
+
 })
 
 
