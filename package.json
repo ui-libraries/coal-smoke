@@ -1,0 +1,17 @@
+{
+  "name": "coal-smoke",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.4",
+    "sentence-splitter": "^2.2.0",
+    "sentiment": "^3.0.1"
+  }
+}
